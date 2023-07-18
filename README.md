@@ -1,27 +1,58 @@
 # pokemon
 Pokemon Data - Correlations, PCA, Sankey Diagram and Logistic Regression Analysis
 
-### The entire notebook is already annotated with text so this README is redundant. See the notebook for a smoother read.
+### The entire notebook is already annotated with text so this README is redundant. 
+### See the notebook for a smoother read.
 
-## TLDR Version 
+## TLDR; Version 
 
 My goal with the project was to discover underlying trends within the dataset.
 
 From types, I wrote a function to determine what is the best Pokemon to play against your opponent, displayed as a Sankey Diagram.
 
+![Sankey Diagram](https://github.com/chewka/pokemon/assets/15725058/c6838596-1452-495c-91bc-cfe83001314b)
+
 Furthermore, I determined that Base Total correlated with 5 other varibles through a Heatmap, seen here as pair plots and a linear regression line.
 
+![heatmap2 300](https://github.com/chewka/pokemon/assets/15725058/e6750502-fd9a-42aa-8f14-1fcd60d79ca5)
+
+![aatack300](https://github.com/chewka/pokemon/assets/15725058/fad543ee-8f7a-4dd1-9126-e26382d047cf)
+
+![defense300](https://github.com/chewka/pokemon/assets/15725058/4c681501-bc3a-4276-b6d8-5bfeb72ede56)
+
+![sp_attack300](https://github.com/chewka/pokemon/assets/15725058/4630a34b-84cc-4384-a19a-725c3a9a06e2)
+
+![sp_defense300](https://github.com/chewka/pokemon/assets/15725058/31d57e69-4c6e-4aeb-9ef8-6efc5a25558b)
+
+![speed300](https://github.com/chewka/pokemon/assets/15725058/bf6f2dac-33f7-4cee-af58-ac54742379c7)
+
+![hp300](https://github.com/chewka/pokemon/assets/15725058/c2b9efed-4352-401e-a158-a1954e60753d)
+
 Highlighting Legendary Pokemon shows they are in a league of their own, all above average.
+![shaded kde 300](https://github.com/chewka/pokemon/assets/15725058/c393cbe6-0c7a-4acb-a866-881588b5ff8e)
+
+![Base Total 300](https://github.com/chewka/pokemon/assets/15725058/96b75cee-ce53-4a09-8a7d-5e53494b22ee)
+
+![Legendary Base Total 300](https://github.com/chewka/pokemon/assets/15725058/ad664ac6-d32c-43ca-ac50-fc11ec9597f3)
 
 A similar trend appears with Base Egg Steps, such that you have a 96% chance of getting a Legendary Pokemon after 20,000 steps.
 
+![base egg steps x index](https://github.com/chewka/pokemon/assets/15725058/dfefe366-bc50-4a1c-9b16-b8a7e26e9de2)
+
+![Percentage over 20K](https://github.com/chewka/pokemon/assets/15725058/31c9682a-76e2-4699-b2da-1967d6d8bb1f)
+
 After narrowing our basic features to ‘pokdex number’, ‘base total’, and ‘base egg steps,’ I made a 3D PCA Plot. 
+
+![PCA 3d 20 300](https://github.com/chewka/pokemon/assets/15725058/343980ec-27e0-4f24-9944-12fdc82f91bd)
 
 The Legendary Pokemon are marked by triangles, mostly in the bottom left.
 
 Using a Linear Regression Classifier, I was able to predict a legendary Pokemon from those three variables with around 90% accuracy, modeled with the following two graphs.
 
-![heatmap2 300](https://github.com/chewka/pokemon/assets/15725058/e6750502-fd9a-42aa-8f14-1fcd60d79ca5)
+![Actual v Predicted 300](https://github.com/chewka/pokemon/assets/15725058/07b80405-008e-499b-b9f4-83e32e6b7eb5)
+
+![actual v predicted all 300](https://github.com/chewka/pokemon/assets/15725058/83e81945-1dc6-441a-8822-8d02dceadd3d)
+
 
 ## Long Version
 
@@ -39,7 +70,7 @@ In general, an aggregate measure is expected to be correlated with its component
 
 ——
 
-Correlations
+### Correlations
 
 Highest Correlations (1.00 > R > 0.8):
 * generation and pokedex number
@@ -77,5 +108,5 @@ It looks like the likelihood of getting an above average Pokémon is slightly hi
 
 What further adds to this analysis is the labeling of Legendary Pokémon. You can clearly see that the game developers kept the Legendary Pokémon base_total all in the above-average group, approximately one standard deviation above the above-average mean.
 
-
+## See Jupyter Notebook for full Discussion of results and Prediction Algorithm
 

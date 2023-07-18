@@ -1,6 +1,8 @@
 # Pokémon Dataset
 Pokemon Data - Correlations, PCA, Sankey Diagram and Logistic Regression Analysis
+
 Link: https://www.kaggle.com/datasets/rounakbanik/pokemon
+
 Made for the AngelHack July 2023 Hackaton
 
 ### The entire notebook is already annotated with text so this README is redundant. 

@@ -8,6 +8,14 @@ Made for the AngelHack July 2023 Hackaton
 ### The entire notebook is already annotated with text so this README is redundant. 
 ### See the notebook for a smoother read.
 
+The following notebook aims to address these questions:
+
+1. What is the best Pokémon type I could use to fight my opponent's Pokémon?
+
+2. How did the Pokémon designers go about distributing the character's abilities to make the game engaging (perhaps even addicting)?
+
+3. Can we predict a legendary Pokémon with minimal information? (Bonus Q - explored at the very end)
+
 ## TLDR; Version 
 
 My goal with the project was to discover underlying trends within the dataset.
@@ -112,7 +120,45 @@ It looks like the likelihood of getting an above average Pokémon is slightly hi
 
 What further adds to this analysis is the labeling of Legendary Pokémon. You can clearly see that the game developers kept the Legendary Pokémon base_total all in the above-average group, approximately one standard deviation above the above-average mean.
 
-## See Jupyter Notebook for full Discussion of results and Prediction Algorithm
+### See Jupyter Notebook for full Discussion of results and Prediction Algorithm
+
+## Prediction Accuracy
+
+```
+#Sort the DataFrame by index
+accuracy_df = preds_df.sort_index()
+
+#Getting the number of data points
+N = len(accuracy_df)
+
+#Set the bar width
+width = 0.4
+
+#Create the figure and axes
+fig, ax = plt.subplots(figsize=(17, 6))
+
+#Define the array of indices
+ind = np.arange(N)
+
+#Plot the actual values as a bar chart
+ax.bar(ind, accuracy_df['is_legendary'], width, label='Actual', color='#800080')
+
+#Plot the predicted values as a bar chart
+ax.bar(ind + width, accuracy_df['is_legendary_pred'], width, label='Predicted', color='#98ee98')
+
+#Set the title and axis labels
+ax.set_title('Actual vs. Predicted is_legendary')
+ax.set_ylabel('is_legendary')
+ax.set_xticks(ind + width / 2)
+ax.set_xticklabels(accuracy_df.index)
+plt.xticks(rotation=90)
+
+#Display the legend
+plt.legend()
+
+#Show the plot
+plt.show()
+```
 
 ## Other Graphs of Interest
 
@@ -127,6 +173,28 @@ What further adds to this analysis is the labeling of Legendary Pokémon. You ca
 ![Pokedex by Generation](https://github.com/chewka/pokemon/assets/15725058/a068a78c-1b50-4852-8a5b-a1c75bbb5864)
 
 ![2D PCA 300](https://github.com/chewka/pokemon/assets/15725058/27fef872-8242-414a-bca8-7201d0e96cf9)
+
+## Libraries 
+
+```
+import pandas as pd
+import numpy as np
+import seaborn as sns
+
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+from matplotlib.lines import Line2D
+from matplotlib.cm import ScalarMappable
+
+from sklearn.feature_selection import SelectKBest
+from sklearn.linear_model import LogisticRegression
+from sklearn.decomposition import PCA
+from sklearn.model_selection import train_test_split
+
+from scipy.stats import pearsonr
+from mpl_toolkits.mplot3d import Axes3D
+from pySankey.sankey import sankey
+```
 
 
 

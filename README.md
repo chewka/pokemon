@@ -114,3 +114,20 @@ What further adds to this analysis is the labeling of Legendary Pokémon. You ca
 
 ## See Jupyter Notebook for full Discussion of results and Prediction Algorithm
 
+## Other Graphs of Interest
+
+![weight300](https://github.com/chewka/pokemon/assets/15725058/d0046808-0530-4b5d-a13b-b3dcaddbdbae)
+
+![height weight 300](https://github.com/chewka/pokemon/assets/15725058/5d2d2271-8f5e-4236-ab8c-40d259f62463)
+
+![kdee2](https://github.com/chewka/pokemon/assets/15725058/8d37cb53-619f-4a42-a60c-7a13b1c79971)
+
+![kde generation](https://github.com/chewka/pokemon/assets/15725058/947e6bc3-1b84-441e-8fe5-0828f00097db)
+
+![Pokedex by Generation](https://github.com/chewka/pokemon/assets/15725058/a068a78c-1b50-4852-8a5b-a1c75bbb5864)
+
+![2D PCA 300](https://github.com/chewka/pokemon/assets/15725058/27fef872-8242-414a-bca8-7201d0e96cf9)
+
+
+
+

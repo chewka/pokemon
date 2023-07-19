@@ -195,7 +195,9 @@ from scipy.stats import pearsonr
 from mpl_toolkits.mplot3d import Axes3D
 from pySankey.sankey import sankey
 ```
+Voice-To-Text for Video: https://gist.github.com/chewka/12608f0672f82271cb10c5f01ebde392
 
+YouTube Video: https://www.youtube.com/watch?v=pjFDyI1pSzc&ab_channel=DianaCiuca
 
 
 

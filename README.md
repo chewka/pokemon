@@ -5,7 +5,19 @@ Link: https://www.kaggle.com/datasets/rounakbanik/pokemon
 
 Made for the AngelHack July 2023 Hackaton
 
-### The entire notebook is already annotated with text so this README is redundant. 
+## Setup
+
+1. Install the Python dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Download `pokemon.csv` from [Kaggle](https://www.kaggle.com/datasets/rounakbanik/pokemon) and place it in this repository directory.
+3. Launch the notebook:
+   ```bash
+   jupyter notebook "Pokémon Dataset - DCiuca.ipynb"
+   ```
+
+### The entire notebook is already annotated with text so this README is redundant.
 ### See the notebook for a smoother read.
 
 The following notebook aims to address these questions:
